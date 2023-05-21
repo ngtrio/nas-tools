@@ -1,13 +1,7 @@
 # NAS 媒体库管理工具
-
 Forked from [NAStool/nas-tools](https://github.com/NAStool/nas-tools)
 
-项目详情以及使用方式请移步原项目。
-
-Docker：[链接](https://hub.docker.com/r/nngtrio/nas-tools)
-
 ## 背景
-
 1. 一些自己修改的功能还不够通用和成熟，暂时不会 PR 到原版 nas-tool
 2. 一些自认为足够通用的 PR，但被原项目驳回
 3. 原项目不再支持 Jackett 了，但我很需要它
