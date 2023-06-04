@@ -183,7 +183,7 @@ class Torrent:
         :return: 种子内容、种子文件列表主目录、种子文件列表、错误信息
         """
         if not path or not os.path.exists(path):
-            return None, "", [], "种子文件不存在：%s" % path
+            return "", None, "", [], "种子文件不存在：%s" % path
         hash, content, retmsg, file_folder, files = "", None, "", "", []
         try:
             # 读取种子文件内容
@@ -193,7 +193,7 @@ class Torrent:
             hash, file_folder, files, retmsg = self.get_torrent_files(path)
         except Exception as e:
             retmsg = "读取种子文件出错：%s" % str(e)
-        return hash, file_folder, files, retmsg
+        return hash, content, file_folder, files, retmsg
 
     @staticmethod
     def __get_url_torrent_filename(req, url):

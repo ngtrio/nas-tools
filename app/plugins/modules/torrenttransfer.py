@@ -443,7 +443,7 @@ class TorrentTransfer(_IPluginModule):
                 # 如果是QB检查是否有Tracker，没有的话补充解析
                 if downloader_type == DownloaderType.QB:
                     # 读取种子内容、解析种子文件
-                    content, _, _, retmsg = Torrent().read_torrent_content(torrent_file)
+                    _, content, _, _, retmsg = Torrent().read_torrent_content(torrent_file)
                     if not content:
                         self.error(f"读取种子文件失败：{retmsg}")
                         fail += 1
