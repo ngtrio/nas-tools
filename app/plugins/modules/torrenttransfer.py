@@ -626,8 +626,6 @@ class TorrentTransfer(_IPluginModule):
         """
         判断种子是否可以做种并处于暂停状态
         """
-        print(type(torrent))
-        print(torrent.__dict__)
         try:
             return torrent.get("state") == "pausedUP" and torrent.get("tracker") if dl_type == DownloaderType.QB \
                 else (torrent.status.stopped and torrent.percent_done == 1 and torrent.trackers)
