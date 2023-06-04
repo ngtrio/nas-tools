@@ -193,7 +193,7 @@ class Torrent:
             hash, file_folder, files, retmsg = self.get_torrent_files(path)
         except Exception as e:
             retmsg = "读取种子文件出错：%s" % str(e)
-        return hash, content, file_folder, files, retmsg
+        return hash, file_folder, files, retmsg
 
     @staticmethod
     def __get_url_torrent_filename(req, url):
