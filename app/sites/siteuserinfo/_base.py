@@ -120,7 +120,7 @@ class _ISiteUserInfo(metaclass=ABCMeta):
 
         self._parse_site_page(self._index_html)
         self._parse_user_base_info(self._index_html)
-        self._pase_unread_msgs()
+        # self._pase_unread_msgs()
         if self._user_traffic_page:
             self._parse_user_traffic_info(self._get_page_content(urljoin(self._base_url, self._user_traffic_page)))
         if self._user_detail_page:
