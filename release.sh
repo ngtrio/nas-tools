@@ -1,1 +1,1 @@
-docker buildx build --platform  linux/amd64 -t ghcr.io/ngtrio/nas-tools:latest --no-cache ./docker
+docker buildx build -t ghcr.io/ngtrio/nas-tools:latest -f ./docker/Dockerfile .
